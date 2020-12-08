@@ -14,5 +14,10 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i "s/#src-git helloworld/src-git helloworld/g" feeds.conf.default
 
+# Change argon theme
+cd package/lean
+rm -r luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
